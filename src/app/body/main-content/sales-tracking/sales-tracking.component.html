@@ -1,0 +1,55 @@
+
+<form class="formwidth" (ngSubmit)="onSubmit()" #myForm="ngForm">
+
+   <table class="fullwidth" cellspacing="5">
+    <tr>
+      <td>Date </td><td><input type="date" name="from" [(ngModel)]="product.initialDate"></td>
+
+      <td>To <input type="date" name="to" [(ngModel)]="product.finalDate"></td>
+    </tr>
+    <tr>
+      <td>
+        <mat-input-container class="fullwidth-">
+          <input matInput #initialPrice placeholder="Start Price" 
+                  id="initialPrice" [(ngModel)]="product.initialPrice" name="initialPrice">
+        </mat-input-container>
+      </td>
+      <td> 
+          <mat-input-container class="fullwidth">
+            <input matInput #finalPrice placeholder="End Price" 
+                    id="finalPrice" [(ngModel)]="product.finallPrice" name="finalPrice">
+          </mat-input-container>
+        </td>
+    </tr>
+  </table>
+  <mat-input-container class="demo-full-width">
+      <input matInput #finalPrice placeholder="Product Name" 
+              id="productName" [(ngModel)]="product.productName" name="productName">
+    </mat-input-container>
+  <p fxFlex fxLayoutAlign="center center">
+      <button type="submit" mat-raised-button>Submit</button>
+    </p>
+</form>
+
+<mat-card *ngIf="dataLoaded" >     
+    <mat-card-content>
+        
+        <table style="width:100%" cellspacing="5">
+                <tr>
+                    <td>Serial Number</td>
+                    <td>Invoice Number</td>
+                    <td>Quantity</td>
+                    <td>Price</td>
+                    <td>Date</td>
+                </tr>
+                    <tr *ngFor="let product of sold">
+                        <td>{{product.serialNumber}}</td>
+                        <td>{{product.invoiceNumber}}</td>
+                        <td>{{product.quantity}}</td>
+                        <td>{{product.price}}</td>
+                        <td>{{product.date}}</td>
+                    </tr>
+        </table>
+    </mat-card-content>
+</mat-card>
+

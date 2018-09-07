@@ -32,10 +32,10 @@ export class TrackingComponent implements OnInit {
 
   getAllProducts() {
     this._appService.getProduct()
-    .subscribe((resApp)=> this.updateUserquestion(resApp));
+    .subscribe((resApp)=> this.update(resApp));
   }
 
-  updateUserquestion(data) {
+  update(data) {
     this.data = data;
     this.dataLoaded = true;
   }

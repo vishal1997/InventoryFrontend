@@ -17,6 +17,7 @@ import 'hammerjs';
 import { HomeComponent } from './body/main-content/home/home.component';
 import { InboundComponent } from './body/main-content/inbound/inbound.component';
 import { TrackingComponent } from './body/main-content/tracking/tracking.component';
+import { SalesTrackingComponent } from './body/main-content/sales-tracking/sales-tracking.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { TrackingComponent } from './body/main-content/tracking/tracking.compone
     AppHeaderComponent,
     HomeComponent,
     InboundComponent,
-    TrackingComponent
+    TrackingComponent,
+    SalesTrackingComponent
   ],
   imports: [
     BrowserModule, FormsModule, HttpModule, MaterialModule, AppRouterModule, 
