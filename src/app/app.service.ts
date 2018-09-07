@@ -4,8 +4,12 @@ import {Observable} from 'rxjs/Observable';
 import 'rxjs/add/operator/catch';
 import 'rxjs/add/operator/map';
 
+
 @Injectable()
 export class AppService {
     constructor(private _http:Http) {}
-    
+    addProduct(productObj) {
+        return this._http.post("/api/v1/product", productObj)
+                .map((response:Response) => response.json());
+    }
 }

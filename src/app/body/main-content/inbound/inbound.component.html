@@ -1,0 +1,39 @@
+<h3>Add product details</h3>
+<form class="formwidth" (ngSubmit)="onSubmit()" #myForm="ngForm">
+    <mat-input-container  class="demo-full-width">
+        <input matInput placeholder="Product Name" id="productName" [(ngModel)]="product.productName" name="productName">
+    </mat-input-container>
+
+      <mat-input-container class="demo-full-width">
+          <input matInput placeholder="Vender Name" id="venderName" [(ngModel)]="product.venderName" name="venderName">
+      </mat-input-container>
+
+  <table class="fullwidth" cellspacing="5">
+    <tr>
+      <td>
+        <mat-input-container class="fullwidth">
+          <input matInput #serialNumber maxlength="8" placeholder="Serial Number" id="serialNumber" [(ngModel)]="product.serialNumber" name="serialNumber">
+          <mat-hint align="end">
+            {{serialNumber.value.length}} / 8
+          </mat-hint>
+        </mat-input-container>
+      </td>
+
+      <td>
+        <mat-input-container class="fullwidth">
+          <input matInput placeholder="Quantity" id="quantity" [(ngModel)]="product.quantity" name="quantity">
+        </mat-input-container>
+      </td>
+
+      <td>
+        <mat-input-container class="fullwidth">
+          <input matInput placeholder="Price" id="price" [(ngModel)]="product.price" name="price">
+        </mat-input-container>
+      </td>
+      
+    </tr>
+  </table>
+  <p>
+    <button type="submit" mat-raised-button>Submit</button>
+  </p>
+</form>
