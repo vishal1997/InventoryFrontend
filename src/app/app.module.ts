@@ -16,7 +16,7 @@ import {NoConflictStyleCompatibilityMode, MdInputModule, MdButtonModule } from '
 import 'hammerjs';
 import { HomeComponent } from './body/main-content/home/home.component';
 import { InboundComponent } from './body/main-content/inbound/inbound.component';
-
+import { TrackingComponent } from './body/main-content/tracking/tracking.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +27,8 @@ import { InboundComponent } from './body/main-content/inbound/inbound.component'
     MainContentComponent,
     AppHeaderComponent,
     HomeComponent,
-    InboundComponent
+    InboundComponent,
+    TrackingComponent
   ],
   imports: [
     BrowserModule, FormsModule, HttpModule, MaterialModule, AppRouterModule, 

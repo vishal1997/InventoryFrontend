@@ -12,4 +12,9 @@ export class AppService {
         return this._http.post("/api/v1/product", productObj)
                 .map((response:Response) => response.json());
     }
+
+    getProduct() {
+        return this._http.get("/api/v1/available")
+                .map((response:Response) => response.json());
+    }
 }
