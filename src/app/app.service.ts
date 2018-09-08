@@ -22,4 +22,14 @@ export class AppService {
         return this._http.post("/api/v1/getSalesDetails/range", product)
                 .map((response:Response) => response.json());
     }
+
+    getSuggestions(productName) {
+        return this._http.post("/api/v1/getProduct", productName)
+                .map((response:Response) => response.json());
+    }
+
+    addSold(product) {
+        return this._http.post("/api/v1/sold", product)
+                .map((response:Response) => response.json());
+    }
 }

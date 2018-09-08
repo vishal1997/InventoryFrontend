@@ -1,0 +1,58 @@
+
+<p>Date:  {{today | date}}</p>
+
+  <mat-input-container  class="demo-full-width">
+      <input matInput placeholder="Customer Name" id="customerName" [(ngModel)]="customer.customerName" name="customerName">
+  </mat-input-container>
+
+    <mat-input-container class="demo-full-width">
+        <input matInput placeholder="Address" id="address" [(ngModel)]="customer.address" name="address">
+    </mat-input-container>
+
+
+    <table class="fullwidth" cellspacing="5">
+      <tr>
+          <td>
+              <mat-input-container class="fullwidth">
+                <input matInput #productName  placeholder="Product Name" id="productName" [(ngModel)]="product.productName" name="productName">
+              </mat-input-container>
+            </td>
+        <td>  
+            <button type="submit" mat-raised-button (click)=get()>Get</button>
+            <mat-input-container class="fullwidth">
+                <input matInput #serialNumber  placeholder="Serial Number" id="serialNumber" [(ngModel)]="details.serialNumber" name="serailNumber">
+              </mat-input-container>
+          
+            
+        </td>
+  </tr>
+</table>
+  <div class="formwidth">
+      <table class="fullwidth" cellspacing="5">
+  <tr>
+        <td>
+          <mat-input-container class="fullwidth">
+            <input matInput placeholder="Quantity" id="quantity" [(ngModel)]="product.quantity" name="quantity">
+          </mat-input-container>
+        </td>
+       
+        <td>
+            <mat-input-container class="fullwidth">
+                <input matInput placeholder="Price" id="price" [(ngModel)]="details.price" name="price">
+              </mat-input-container>
+        </td>
+        
+        <td>
+            <mat-input-container class="fullwidth">
+                <input matInput placeholder="Total" id="total" [(ngModel)]="total" name="total">
+              </mat-input-container>
+              
+   
+          </td>
+      </tr>
+    </table>
+
+<p>
+  <button type="submit" mat-raised-button (click) = "onSubmit()">Submit</button>
+</p>
+</div>

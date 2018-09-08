@@ -18,6 +18,7 @@ import { HomeComponent } from './body/main-content/home/home.component';
 import { InboundComponent } from './body/main-content/inbound/inbound.component';
 import { TrackingComponent } from './body/main-content/tracking/tracking.component';
 import { SalesTrackingComponent } from './body/main-content/sales-tracking/sales-tracking.component';
+import { SalesComponent } from './body/main-content/sales/sales.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { SalesTrackingComponent } from './body/main-content/sales-tracking/sales
     HomeComponent,
     InboundComponent,
     TrackingComponent,
-    SalesTrackingComponent
+    SalesTrackingComponent,
+    SalesComponent
   ],
   imports: [
     BrowserModule, FormsModule, HttpModule, MaterialModule, AppRouterModule, 
